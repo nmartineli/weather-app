@@ -1,0 +1,88 @@
+h2,
+h3,
+p,
+h6,
+h4,
+li {
+  text-align: center;
+  color: #f6f6f6;
+}
+
+h3 {
+  font-size: small;
+}
+
+h6 {
+  color: #757575;
+  font-size: 13px;
+  font-weight: bolder;
+}
+p {
+  font-size: small;
+  color: #757575;
+}
+
+form {
+  padding: 15px;
+}
+
+a:visited {
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 0;
+  font-size: 14px;
+}
+
+.app {
+  width: 600px;
+  display: block;
+  margin: 30px auto;
+}
+
+div#weatherNow {
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+}
+
+.card-text#icon {
+  padding-bottom: 10px;
+  font-size: x-large;
+}
+
+h2#city {
+  padding-top: 10px;
+  margin: 0;
+  padding-bottom: 0;
+  font-size: 25px;
+}
+
+h4#date {
+  margin: 6px auto;
+  padding: 0;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+h2#temperature {
+  color: #fff;
+  margin: 10px, auto;
+  font-weight: 500;
+}
+
+#celsius,
+#farenheit {
+  text-decoration: underline;
+  color: #fff;
+}
+
+h2#iconNow {
+  font-size: 40px;
+  color: #fff;
+  padding-bottom: 15px;
+}

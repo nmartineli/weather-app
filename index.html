@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/1e0cb5cf40.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Lato&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="app">
+      <div class="card">
+          <div id="weatherNow">
+          <form class="form" id="searchCityBox">
+            <input
+              type="search"
+              class="form-control mb-2 mr-sm-2 shadow-sm"
+              id="searchBox"
+              aria-describedby="searchBox"
+              placeholder="Check another city 🔍"
+            />
+            <button type="button" class="btn btn-primary" id="searchCityButton">
+              Search
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              id="currentLocationButton"
+            >
+              Current city
+            </button>
+          </form>
+
+          <h2 id="city"></h2>
+
+          <h4 id="date"></h4>
+          <h2 id="temperature">
+            <span id="temperature-number"></span>°
+            <sup
+              ><small
+                ><a href="#" id="celsius">C</a> |
+                <a href="#" id="farenheit">F</a></small
+              ></sup
+            >
+          </h2>
+          <ul>
+            <li>Humidity: <span id="humidity">
+            </span>%</li>
+            <li>Wind: <span id="wind"></span> km/h</li>
+            <li> <span id="description"></span></li>
+          </ul>
+          <h2 id="iconNow">☀️</h2>
+        </div>
+
+        <div class="card-group">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-title">MON</h6>
+              <p class="card-text">
+                <strong> 25° </strong><br />
+                17°
+              </p>
+            </div>
+            <h6 class="card-text" id="icon">☀️</h6>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-title">TUE</h6>
+              <p class="card-text">
+                <strong> 27°</strong> <br />
+                19°
+              </p>
+            </div>
+            <h6 class="card-text" id="icon">☁️</h6>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-title">WED</h6>
+              <p class="card-text">
+                <strong> 33° </strong><br />
+                27°
+              </p>
+            </div>
+            <h6 class="card-text" id="icon">⛈️</h6>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-title">THU <br /></h6>
+              <p class="card-text">
+                <strong> 25° </strong><br />
+                15°
+                <br />
+              </p>
+            </div>
+            <h6 class="card-text" id="icon">⛅</h6>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-title">FRI</h6>
+              <p class="card-text">
+                <strong> 19° </strong><br />
+                12°
+              </p>
+            </div>
+            <h6 class="card-text" id="icon">🌧️</h6>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-title">SAT</h6>
+              <p class="card-text">
+                <strong> 25° </strong><br />
+                17°
+              </p>
+            </div>
+            <h6 class="card-text" id="icon">☀️</h6>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-title">SUN</h6>
+              <p class="card-text">
+                <strong> 33° </strong><br />
+                25°
+              </p>
+            </div>
+            <h6 class="card-text" id="icon">⛈️</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/script.js"></script>
+  </body>
+</html>
