@@ -30,7 +30,7 @@
           <div id="weatherNow">
             <form class="form" id="searchCityBox">
             <div class="row">
-              <div class="col-9">
+              <div class="col-8">
                 <input
               type="search"
               class="form-control shadow-sm"
@@ -52,27 +52,23 @@
             </div>
           </form>
           </div>
+                    <h2 id="city"></h2>
+<h3 id="date"></h3>
+                    <h2 id="temperature">
+                      <span id="temperature-number"></span>
+                      <sup><small><a href="#" id="celsius">°C</a> |
+                          <a href="#" id="farenheit">°F</a></small></sup>
+                    </h2>
 
-          <h2 id="city"></h2>
-          <h4 id="date"></h4>
-          <h4><span id="description"></span></h4>
 
-          <h2 id="temperature">
-            <span id="temperature-number"></span>
-            <sup
-              ><small
-                ><a href="#" id="celsius">°C</a> |
-                <a href="#" id="farenheit">°F</a></small
-              ></sup
-            >
-          </h2>
-          <ul>
-            <li>Humidity: <span id="humidity">
-            </span>%</li>
-            <li>Wind: <span id="wind"></span> km/h</li>
+                    <h2 id="iconNow">☀️</h2>
+<h4><span id="description"></span></h4>
+          <ul id="humidity-wind">
+            <li><b>Humidity: </b> <span id="humidity">
+            </span>%  | </li>
+            <li>   <b>Wind: </b><span id="wind"></span> km/h</li>
           </ul>
-          <h2 id="iconNow">☀️</h2>
-        </div>
+                  </div>
 
 
         <div class="row" id="forecast">
@@ -160,38 +156,6 @@
           </ul>
         </div>
 
-<div class="col" id="cards">
-          <ul id="card-list">
-          <li class="card-forecast">
-            <strong> sat </strong>
-          </li>
-            <li class="card-forecast">
-              <strong> 25° </strong>
-            </li>
-            <li class="card-forecast">
-              17°
-            </li>
-            <li class="card-forecast">
-              ☀️
-            </li>
-          </ul>
-        </div>
-<div class="col"id="cards">
-                <ul id="card-list">
-              <li class="card-forecast">
-                <strong> sun </strong>
-              </li>
-            <li class="card-forecast">
-              <strong> 33° </strong>
-            </li>
-            <li class="card-forecast">
-              25°
-            </li>
-            <li class="card-forecast">
-              ⛈️
-            </li>
-          </ul>
-        </div>
             </div>
                 </div>
                 

@@ -19,9 +19,9 @@ let day = days[currentDate.getDay()];
 let time = document.querySelector("#date");
 
 if (minutes < 10) {
-  time.innerHTML = `${day} ${hour}:0${minutes}`;
+  time.innerHTML = `${day}, ${hour}:0${minutes}`;
 } else {
-  time.innerHTML = `${day} ${hour}:${minutes}`;
+  time.innerHTML = `${day}, ${hour}:${minutes}`;
 }
 
 // Searchbox

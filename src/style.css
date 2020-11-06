@@ -7,6 +7,7 @@ li {
 	color: #f6f6f6;
 	margin: 0;
 	text-align: center;
+	font-family: "Roboto", sans-serif;
 }
 
 h6 {
@@ -16,8 +17,8 @@ h6 {
 }
 
 form {
-	width: 600px;
-	padding: 15px 10px;
+	width: 500px;
+	padding: 20px 25px;
 	border-radius: 10px;
 }
 
@@ -36,7 +37,7 @@ li {
 }
 
 .weatherApp {
-	width: 600px;
+	width: 500px;
 	display: block;
 	margin: 30px auto 0px auto;
 }
@@ -47,52 +48,30 @@ li {
 	padding: 0;
 }
 
-#forecast {
-	width: 600px;
-	margin: 0;
-}
-
-#weatherNow {
-	background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
-	width: 600px;
-	border-radius: 10px;
-}
-
-h2#city {
-	padding-top: 10px;
-	margin: 0;
-	padding-bottom: 0;
-	font-size: 28px;
+h3 {
+	font-weight: 500;
+	font-size: 16px;
 }
 
 h4 {
-	margin: 6px auto;
-	font-weight: 400;
-	font-size: 17px;
-}
-
-h2#temperature {
-	color: #fff;
-	margin: 10px, auto;
 	font-weight: 500;
-	font-size: 35px;
-}
-
-#celsius,
-#farenheit {
-	text-decoration: none;
-	color: #fff;
-}
-
-h2#iconNow {
-	font-size: 40px;
-	color: #fff;
-	padding-bottom: 20px;
+	font-size: 16px;
+	padding-bottom: 10px;
 }
 
 .card-forecast {
 	color: #757575;
 	font-size: 14px;
+}
+
+ul#humidity-wind li {
+	display: inline;
+}
+
+ul#humidity-wind {
+	text-align: center;
+	margin: 0;
+	padding-bottom: 10px;
 }
 
 .footer {
@@ -119,4 +98,41 @@ a:visited {
 
 #card-list {
 	padding: 8px;
+}
+
+h2#temperature {
+	color: #fff;
+	font-weight: 500;
+	font-size: 40px;
+	padding: 15px 0;
+}
+
+#celsius,
+#farenheit {
+	text-decoration: none;
+	color: #fff;
+}
+
+h2#iconNow {
+	font-size: 40px;
+	color: #fff;
+	padding-bottom: 1px;
+}
+
+#forecast {
+	width: 500px;
+	margin: 0;
+}
+
+#weatherNow {
+	background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+	width: 500px;
+	border-radius: 10px;
+}
+
+h2#city {
+	padding-top: 2px;
+	margin: 0;
+	padding-bottom: 0;
+	font-size: 30px;
 }
