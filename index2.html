@@ -24,9 +24,8 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="weatherApp">
-        <div class="app">
+    <div class="app">
+      <div class="card">
           <div id="weatherNow">
             <form class="form" id="searchCityBox">
             <div class="row">
@@ -49,20 +48,20 @@
               class="btn btn-primary shadow-sm"
               id="currentLocationButton"
             > <i class="fas fa-map-marker-alt"></i></button>
-            </div>
+
+</div>
           </form>
+
           </div>
-
           <h2 id="city"></h2>
-          <h4 id="date"></h4>
-          <h4><span id="description"></span></h4>
 
+          <h4 id="date"></h4>
           <h2 id="temperature">
-            <span id="temperature-number"></span>
+            <span id="temperature-number"></span>°
             <sup
               ><small
-                ><a href="#" id="celsius">°C</a> |
-                <a href="#" id="farenheit">°F</a></small
+                ><a href="#" id="celsius">C</a> |
+                <a href="#" id="farenheit">F</a></small
               ></sup
             >
           </h2>
@@ -70,14 +69,14 @@
             <li>Humidity: <span id="humidity">
             </span>%</li>
             <li>Wind: <span id="wind"></span> km/h</li>
+            <li> <span id="description"></span></li>
           </ul>
           <h2 id="iconNow">☀️</h2>
         </div>
 
-
-        <div class="row" id="forecast">
-          <div class="col" id="cards">
-            <ul id="card-list">
+        <div class="row">
+          <div class="col">
+            <ul>
                 <li class="card-forecast">
                   <strong> mon </strong>
                 </li>
@@ -93,8 +92,8 @@
               </ul>
             </div>
 
-<div class="col" id="cards">
-                <ul id="card-list">
+<div class="col">
+                <ul>
                 <li class="card-forecast">
                   <strong> tue </strong>
                 </li>
@@ -110,8 +109,8 @@
               </ul>
             
           </div>
-    <div class="col" id="cards">   
-        <ul id="card-list">
+    <div class="col">   
+        <ul>
             <li class="card-forecast">
               <strong> wed </strong>
             </li>
@@ -126,8 +125,8 @@
             </li>
           </ul>
       </div>
-<div class="col" id="cards">
-                  <ul id="card-list">
+<div class="col">
+                  <ul>
                   <li class="card-forecast">
                     <strong> thu </strong>
                   </li>
@@ -143,8 +142,8 @@
           </ul>
         </div>
 
-    <div class="col" id="cards">
-          <ul id="card-list">
+    <div class="col">
+          <ul>
       <li class="card-forecast">
         <strong> fri </strong>
       </li>
@@ -160,8 +159,8 @@
           </ul>
         </div>
 
-<div class="col" id="cards">
-          <ul id="card-list">
+<div class="col">
+          <ul>
           <li class="card-forecast">
             <strong> sat </strong>
           </li>
@@ -176,8 +175,8 @@
             </li>
           </ul>
         </div>
-<div class="col"id="cards">
-                <ul id="card-list">
+<div class="col">
+                <ul>
               <li class="card-forecast">
                 <strong> sun </strong>
               </li>
@@ -193,13 +192,10 @@
           </ul>
         </div>
             </div>
-                </div>
-                
-          <p class="footer"><a href="https://github.com/nmartineli/weather-app" class="footer-link">Open-source code</a> by
+      </div>
+      <p class="footer"><a href="https://github.com/nmartineli/weather-app" class="footer-link">Open-source code</a> by
         Natalia Martineli</p>
-</div>
-</div>
-    
+    </div>
     <script src="src/script.js"></script>
   </body>
 </html>
