@@ -136,3 +136,7 @@ h2#city {
 	padding-bottom: 0;
 	font-size: 30px;
 }
+
+#description {
+	text-transform: capitalize;
+}
