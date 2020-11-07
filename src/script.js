@@ -43,14 +43,15 @@ function searchCity(event) {
 }
 
 function getCityInfo(response) {
-  document.querySelector("#temperature-number").innerHTML = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp
+  document.querySelector("#temperature-number").innerHTML = Math.round(celsiusTemperature);
   document.querySelector("#city").innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed * 3.6);
- document.querySelector("#humidity").innerHTML = response.data.main.humidity;
- document.querySelector("#description").innerHTML = response.data.weather[0].description;
- document.querySelector("#date").innerHTML = formatDate(response.data.dt * 1000);
- document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
-document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#description").innerHTML = response.data.weather[0].description;
+  document.querySelector("#date").innerHTML = formatDate(response.data.dt * 1000);
+  document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+  document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
 }
 
 let citySearchButton = document.querySelector("#searchCityButton");
@@ -59,19 +60,32 @@ citySearchButton.addEventListener("click", searchCity);
 let citySearchBox = document.querySelector("#searchCityBox");
 citySearchBox.addEventListener("submit", searchCity);
 
-searchDefaultCity("São Paulo")
 
 // Temperature scale
 
-function getFahrenheitTemperature(event) {
-event.preventDefault()
-let celsiusTemperature = document.querySelector("#temperature-number");
-let fahrenheitTemperature = 1 * 1.8 + 32;
-document.querySelector("#temperature-number").innerHTML = Math.round(fahrenheitTemperature);
+function displayFahrenheintTemperature(event) {
+event.preventDefault();
+celsiusLink.classList.remove("active");
+fahrenheintLink.classList.add("active");
+let fahrenheintTemperature = (celsiusTemperature * 9/5) + 32;
+document.querySelector("#temperature-number").innerHTML = Math.round(fahrenheintTemperature);
 }
 
-let fahrenheitScale = document.querySelector("#fahrenheit");
-fahrenheitScale.addEventListener("click", getFahrenheitTemperature)
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  fahrenheintLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+  document.querySelector("#temperature-number").innerHTML = Math.round(celsiusTemperature);
+
+}
+
+let fahrenheintLink = document.querySelector("#fahrenheit-link")
+fahrenheintLink.addEventListener("click", displayFahrenheintTemperature)
+
+let celsiusTemperature = null
+
+let celsiusLink = document.querySelector("#celsius-link")
+celsiusLink.addEventListener("click", displayCelsiusTemperature)
 
 // Current City
 
@@ -90,3 +104,6 @@ function currentLocation(position) {
 
 let currentLocationButton = document.querySelector("#currentLocationButton");
 currentLocationButton.addEventListener("click", currentLocation);
+
+
+searchDefaultCity("São Paulo")

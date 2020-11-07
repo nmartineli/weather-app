@@ -26,18 +26,18 @@
         <div class="app">
           <div id="weatherNow">
             <form class="form-inline" id="searchCityBox">
-            <div class="col-auto">
+              <div class="col-auto">
                 <input
-              type="search"
-              class="form-control shadow-sm"
-              id="searchBox"
-              aria-describedby="searchBox"
-              placeholder="Search another city"
-              autocomplete="off"/>
-            </div>
-                        <button type="button" class="btn btn-primary shadow-sm" id="searchCityButton">
-              <i class="fas fa-search"></i>
-            </button>
+                type="search"
+                class="form-control shadow-sm"
+                id="searchBox"
+                aria-describedby="searchBox"
+                placeholder="Search another city"
+                autocomplete="off"/>
+                </div>
+              <button type="button" class="btn btn-primary shadow-sm" id="searchCityButton">
+                <i class="fas fa-search"></i>
+              </button>
             <div class="col-auto">
             <button
               type="button"
@@ -46,21 +46,17 @@
             > <i class="fas fa-map-marker-alt"></i></button>
             </div>
           </form>
-
                     <h2 id="city"></h2>
-<h3 id="date"></h3>
+                    <h3 id="date"></h3>
                     <h2 id="temperature">
-                      <span id="temperature-number"></span><sup><a href="#" id="celsius"> °C</a> |
-                          <a href="#" id="fahrenheit">°F</a></sup>
+                      <span id="temperature-number"></span><sup><a href="#" id="celsius-link" class="active"> °C</a> | <a href="#" id="fahrenheit-link">°F</a></sup>
                     </h2>
                     <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather conditions" id="icon">
 <h4><span id="description"></span></h4>
           <ul id="humidity-wind">
-            <li><b>Humidity: </b> <span id="humidity">
-            </span>%  | </li>
-            <li>   <b>Wind: </b><span id="wind"></span> km/h</li>
+            <li><b>Humidity: </b><span id="humidity"> </span>%  |  </li><li><b>Wind: </b><span id="wind"></span> km/h</li>
           </ul>
-                  </div>
+           </div>
 
 
         <div class="row" id="forecast">
