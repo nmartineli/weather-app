@@ -32,7 +32,8 @@
               class="form-control shadow-sm"
               id="searchBox"
               aria-describedby="searchBox"
-              placeholder="Search another city"/>
+              placeholder="Search another city"
+              autocomplete="off"/>
             </div>
                         <button type="button" class="btn btn-primary shadow-sm" id="searchCityButton">
               <i class="fas fa-search"></i>
@@ -49,10 +50,10 @@
                     <h2 id="city"></h2>
 <h3 id="date"></h3>
                     <h2 id="temperature">
-                      <span id="temperature-number"></span><sup><small><a href="#" id="celsius">°C</a> |
-                          <a href="#" id="fahrenheit">°F</a></small></sup>
+                      <span id="temperature-number"></span><sup><a href="#" id="celsius"> °C</a> |
+                          <a href="#" id="fahrenheit">°F</a></sup>
                     </h2>
-                    <img src="" alt="weather conditions" id="icon">
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather conditions" id="icon">
 <h4><span id="description"></span></h4>
           <ul id="humidity-wind">
             <li><b>Humidity: </b> <span id="humidity">
