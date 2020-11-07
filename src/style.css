@@ -1,19 +1,15 @@
-h2,
-h3,
-p,
-h6,
-h4,
-li {
-	color: #f6f6f6;
-	margin: 0;
+body {
 	text-align: center;
 	font-family: "Roboto", sans-serif;
 }
 
-h6 {
-	color: #757575;
-	font-size: 13px;
-	font-weight: bolder;
+h2,
+h3,
+p,
+h4,
+li {
+	color: #f6f6f6;
+	margin: 0;
 }
 
 form {
@@ -34,7 +30,7 @@ ul {
 
 li {
 	padding: 0;
-	font-size: 14px;
+	font-size: 15px;
 }
 
 .weatherApp {
@@ -44,6 +40,7 @@ li {
 }
 
 .app {
+	background-image: linear-gradient(to top, #48c6ef 15%, #6f86d6 100%);
 	border: solid 1px #e8e8e8;
 	border-radius: 10px;
 	padding: 0;
@@ -57,12 +54,35 @@ h3 {
 h4 {
 	font-weight: 500;
 	font-size: 16px;
-	padding-bottom: 10px;
+	padding-bottom: 15px;
 }
 
 .card-forecast {
+	color: #888888;
+	font-size: 13px;
+}
+
+.card-day {
+	font-weight: 700;
+	color: #888888;
+	font-size: 15px;
+}
+
+.footer {
 	color: #757575;
-	font-size: 14px;
+	font-size: 10px;
+	margin: 3px;
+	text-align: left;
+}
+
+.footer a:link {
+	color: #757575;
+	text-decoration: underline;
+}
+
+.footer a:visited {
+	color: #757575;
+	text-decoration: underline;
 }
 
 ul#humidity-wind li {
@@ -73,28 +93,13 @@ ul#humidity-wind {
 	text-align: center;
 	margin: 0;
 	padding-bottom: 10px;
+	font-size: ;
 }
 
-.footer {
-	color: #757575;
-	font-size: 10px;
-	margin: 3px;
-	text-align: left;
-}
-
-a:link {
-	color: #757575;
-	text-decoration: underline;
-}
-
-a:visited {
-	color: #757575;
-	text-decoration: underline;
-}
-
-#cards {
-	border: solid 1px #e8e8e8;
-	border-radius: 10px;
+#forecast {
+	background-color: rgb(255, 255, 255, 0.6);
+	margin: 0;
+	padding-top: 10px;
 }
 
 #card-list {
@@ -102,16 +107,12 @@ a:visited {
 }
 
 h2#temperature {
-	color: #fff;
-	font-weight: 500;
-	font-size: 40px;
 	padding-top: 15px;
 }
 
-#celsius,
-#farenheit {
-	text-decoration: none;
-	color: #fff;
+#temperature-number {
+	font-weight: 600;
+	font-size: 42px;
 }
 
 #icon {
@@ -120,13 +121,7 @@ h2#temperature {
 	width: 90px;
 }
 
-#forecast {
-	margin: 0;
-}
-
 #weatherNow {
-	background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
-	width: 400px;
 	border-radius: 10px;
 }
 
@@ -135,6 +130,7 @@ h2#city {
 	margin: 0;
 	padding-bottom: 0;
 	font-size: 30px;
+	font-weight: 400;
 }
 
 #description {
