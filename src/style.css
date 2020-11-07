@@ -54,7 +54,7 @@ h3 {
 h4 {
 	font-weight: 500;
 	font-size: 16px;
-	padding-bottom: 15px;
+	padding-bottom: 5px;
 }
 
 .card-forecast {
@@ -65,7 +65,7 @@ h4 {
 .card-day {
 	font-weight: 700;
 	color: #888888;
-	font-size: 15px;
+	font-size: 14px;
 }
 
 .footer {
@@ -87,23 +87,19 @@ h4 {
 
 ul#humidity-wind li {
 	display: inline;
+	font-size: 14px;
 }
 
 ul#humidity-wind {
 	text-align: center;
 	margin: 0;
-	padding-bottom: 10px;
-	font-size: ;
+	padding-bottom: 15px;
 }
 
 #forecast {
-	background-color: rgb(255, 255, 255, 0.6);
+	background-color: rgb(255, 255, 255, 0.7);
 	margin: 0;
-	padding-top: 10px;
-}
-
-#card-list {
-	padding: 8px;
+	padding-top: 15px;
 }
 
 h2#temperature {
