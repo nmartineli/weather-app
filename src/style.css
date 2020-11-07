@@ -17,8 +17,9 @@ h6 {
 }
 
 form {
-	width: 500px;
-	padding: 20px 25px;
+	width: 400px;
+	margin: 0 auto;
+	padding: 25px;
 	border-radius: 10px;
 }
 
@@ -37,7 +38,7 @@ li {
 }
 
 .weatherApp {
-	width: 500px;
+	width: 400px;
 	display: block;
 	margin: 30px auto 0px auto;
 }
@@ -104,7 +105,7 @@ h2#temperature {
 	color: #fff;
 	font-weight: 500;
 	font-size: 40px;
-	padding: 15px 0;
+	padding-top: 15px;
 }
 
 #celsius,
@@ -113,20 +114,19 @@ h2#temperature {
 	color: #fff;
 }
 
-h2#iconNow {
-	font-size: 40px;
-	color: #fff;
-	padding-bottom: 1px;
+#icon {
+	display: block;
+	margin: 0 auto;
+	width: 90px;
 }
 
 #forecast {
-	width: 500px;
 	margin: 0;
 }
 
 #weatherNow {
 	background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
-	width: 500px;
+	width: 400px;
 	border-radius: 10px;
 }
 

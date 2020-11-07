@@ -49,6 +49,7 @@ function getCityInfo(response) {
  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
  document.querySelector("#description").innerHTML = response.data.weather[0].description;
  document.querySelector("#date").innerHTML = formatDate(response.data.dt * 1000);
+ document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/10d@2x.png`)
 }
 
 let citySearchButton = document.querySelector("#searchCityButton");

@@ -28,22 +28,19 @@
       <div class="weatherApp">
         <div class="app">
           <div id="weatherNow">
-            <form class="form" id="searchCityBox">
-            <div class="row">
-              <div class="col-8">
+            <form class="form-inline" id="searchCityBox">
+            <div class="col-auto">
                 <input
               type="search"
               class="form-control shadow-sm"
               id="searchBox"
               aria-describedby="searchBox"
-              placeholder="Check another city"/>
-              </div>
-              <div class="col">
-            <button type="button" class="btn btn-primary shadow-sm" id="searchCityButton">
+              placeholder="Search another city"/>
+            </div>
+                        <button type="button" class="btn btn-primary shadow-sm" id="searchCityButton">
               <i class="fas fa-search"></i>
             </button>
-            </div>
-            <div class="col">
+            <div class="col-auto">
             <button
               type="button"
               class="btn btn-primary shadow-sm"
@@ -51,7 +48,7 @@
             > <i class="fas fa-map-marker-alt"></i></button>
             </div>
           </form>
-          </div>
+
                     <h2 id="city"></h2>
 <h3 id="date"></h3>
                     <h2 id="temperature">
@@ -59,9 +56,7 @@
                       <sup><small><a href="#" id="celsius">°C</a> |
                           <a href="#" id="fahrenheit">°F</a></small></sup>
                     </h2>
-
-
-                    <h2 id="iconNow">☀️</h2>
+                    <img src="" alt="weather conditions" id="icon">
 <h4><span id="description"></span></h4>
           <ul id="humidity-wind">
             <li><b>Humidity: </b> <span id="humidity">
