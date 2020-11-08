@@ -1,6 +1,3 @@
-// Searchbox
-
-
 function formatDate(timestamp){
 let date = new Date(timestamp);
 let hours = date.getHours();
@@ -30,6 +27,14 @@ let apiKey = "6d9cebf9851ed0f6ae8a89e4056f4b5a";
   let unit = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
    axios.get(apiUrl).then(getCityInfo);
+
+   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${unit}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response){
+  console.log(response.data);
+
 }
 
 function searchCity(event) {

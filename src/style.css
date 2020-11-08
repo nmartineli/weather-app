@@ -100,6 +100,10 @@ sup {
 	text-decoration: underline;
 }
 
+.forecast-image {
+	width: 35px;
+}
+
 ul#humidity-wind li {
 	display: inline;
 	font-size: 14px;
