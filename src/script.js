@@ -1,13 +1,5 @@
 function formatDate(timestamp){
 let date = new Date(timestamp);
-let hours = date.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
-} 
-let minutes = date.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-} 
 let days = [
   "Sunday",
   "Monday",
@@ -18,8 +10,22 @@ let days = [
   "Saturday",
 ];
 let day = days[date.getDay()];
-return `${day}, ${hours}:${minutes}`;
+return `${day}, ${formatHours(timestamp)}`;
 
+}
+
+function formatHours(timestamp) {
+let date = new Date(timestamp);
+let hours = date.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+} 
+let minutes = date.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+
+return `${hours}:${minutes}`;
 }
 
 function searchDefaultCity(city){
@@ -33,7 +39,28 @@ let apiKey = "6d9cebf9851ed0f6ae8a89e4056f4b5a";
 }
 
 function displayForecast(response){
-  console.log(response.data);
+   document.querySelector("#forecast").innerHTML = null; 
+  let forecast = null;
+
+  for (let index = 0; index < 5; index++) {
+  
+  forecast = response.data.list[index]; 
+  document.querySelector("#forecast").innerHTML += 
+  `
+           <div class="col" id="cards">
+            <ul id="card-list">
+                <li class="card-day">${formatHours(forecast.dt * 1000)}</li>
+                <li class="card-forecast">
+                  <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="${forecast.weather[0].description}" class="forecast-image">
+                </li>
+                <li class="card-forecast">
+                  <strong>${Math.round(forecast.main.temp_max)}° </strong>${Math.round(forecast.main.temp_min)}°
+                </li>
+              </ul>
+            </div>
+          </div>
+`    
+  }
 
 }
 
@@ -68,12 +95,12 @@ citySearchBox.addEventListener("submit", searchCity);
 
 // Temperature scale
 
-function displayFahrenheintTemperature(event) {
+function displayFahrenheitTemperature(event) {
 event.preventDefault();
 celsiusLink.classList.remove("active");
 fahrenheintLink.classList.add("active");
-let fahrenheintTemperature = (celsiusTemperature * 9/5) + 32;
-document.querySelector("#temperature-number").innerHTML = Math.round(fahrenheintTemperature);
+let fahrenheitTemperature = (celsiusTemperature * 9/5) + 32;
+document.querySelector("#temperature-number").innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function displayCelsiusTemperature(event) {
@@ -85,7 +112,7 @@ function displayCelsiusTemperature(event) {
 }
 
 let fahrenheintLink = document.querySelector("#fahrenheit-link")
-fahrenheintLink.addEventListener("click", displayFahrenheintTemperature)
+fahrenheintLink.addEventListener("click", displayFahrenheitTemperature)
 
 let celsiusTemperature = null
 
