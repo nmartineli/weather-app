@@ -30,6 +30,10 @@ li {
 	font-size: 15px;
 }
 
+div.col {
+	padding: 0 10px;
+}
+
 .weatherApp {
 	width: 400px;
 	display: block;
