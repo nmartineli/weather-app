@@ -41,8 +41,8 @@ div.col {
 }
 
 .app {
-	background-image: linear-gradient(to top, #48c6ef 20%, #6f86d6 90%);
-	border: solid 1px #b8b8b8;
+	background-image: linear-gradient(to top, #6f86d6 10%, #48c6ef 100%);
+	border: solid 1px #c0c0c0;
 	border-radius: 10px;
 	padding: 0;
 }
@@ -77,18 +77,18 @@ sup {
 }
 
 .card-forecast {
-	color: #989898;
+	color: #707070;
 	font-size: 13px;
 }
 
 .card-day {
 	font-weight: 700;
-	color: #989898;
+	color: #707070;
 	font-size: 14px;
 }
 
 .footer {
-	color: #989898;
+	color: #707070;
 	font-size: 10px;
 	margin: 3px;
 	text-align: left;
@@ -121,7 +121,7 @@ ul#humidity-wind {
 }
 
 #forecast {
-	background-color: rgb(255, 255, 255, 0.8);
+	background-color: rgb(255, 255, 255, 0.5);
 	margin: 0 auto;
 	padding: 15px 2px 5px 2px;
 	border-radius: 0 0 10px 10px;
