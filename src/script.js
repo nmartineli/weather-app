@@ -93,8 +93,6 @@ let citySearchBox = document.querySelector("#searchCityBox");
 citySearchBox.addEventListener("submit", searchCity);
 
 
-// Temperature scale
-
 function displayFahrenheitTemperature(event) {
 event.preventDefault();
 celsiusLink.classList.remove("active");
@@ -102,6 +100,7 @@ fahrenheintLink.classList.add("active");
 let fahrenheitTemperature = (celsiusTemperature * 9/5) + 32;
 document.querySelector("#temperature-number").innerHTML = Math.round(fahrenheitTemperature);
 }
+
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
