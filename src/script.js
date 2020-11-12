@@ -127,9 +127,6 @@ function showLocation(position) {
   let unit = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${unit}`;
   axios.get(apiUrl).then(getCityInfo);
-
-  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${unit}`;
-  axios.get(apiUrl).then(displayForecast);
 }
 
 function currentLocation(position) {
